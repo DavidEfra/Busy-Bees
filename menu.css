@@ -1,0 +1,276 @@
+:root {
+    --primario: #F5CD6E;
+    --secundario: #FBDC76;
+    --amarillo: #FACA2A;
+    --negro: #000000;
+    --carne: #FFD8BC; 
+    --tenue: #F2F2F2;
+    --oscuro: #D9D9D9;
+    --cafe: #733421;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body{
+    min-height: 100vh;
+    background-color: fff;
+  }
+
+  
+  
+  .side-bar{
+    background-color: var(--primario);
+    backdrop-filter: blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto; 
+    transition: 0.6s ease;
+    transition-property: left;
+  }
+
+  .side-bar .menu{
+    width: 100%;
+    margin-top: 60px;
+  }
+  
+  .side-bar .menu .item{
+    position: relative;
+    cursor: pointer;
+    
+  }
+  
+  .side-bar.active {
+    z-index: 9999;
+  }
+  
+  
+  .side-bar .menu .item a{
+    font-family: 'Krub',sans-serif;
+    color: #FFF;
+    background-color: var(--primario);
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 2px 30px;
+    margin-bottom: 20px;
+    line-height: 60px;
+    border-radius: 15px;
+  }
+  
+  .side-bar .menu .item a:hover{
+    background-color: var(--secundario);
+    transition: 0.3 ease;
+  }
+  
+  
+  .side-bar .menu .item i{
+    margin-right: 15px;
+  }
+  
+  .side-bar .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+  }
+  
+  .sub-item{
+    margin-top: 10px;
+    margin-left: 40px;
+    padding-top: 1000px;
+  }
+  
+  .side-bar .menu .item .sub-menu{
+    background: var(--primario  );
+    display: none;
+    
+  }
+ 
+  
+  .rotate{
+    transform: rotate(90deg);
+  }
+  
+  .close-btn{
+    position: absolute;
+    color: #FFF;
+    font-size: 20px;
+    font-family: 'Krub', sans-serif;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+  }
+  
+  .side-bar.active{
+    left: 0;
+    
+  }
+
+  .main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+
+
+
+
+.categorias{
+    width: 130px;
+    padding: 15px;
+    margin-top: 21px;
+    border: none;
+    background: #D9D9D9;
+    border-radius: .7rem;
+}
+
+.title{
+  text-align: center;
+}
+
+.descubrir{
+  font-size: 1.7rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  text-align: right  ;
+  margin-bottom: 10px;
+  font-family: 'Krub', sans-serif;
+  text-align: left;
+}
+
+section{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+hr{
+  width: 1000px;
+}
+
+
+
+.user{
+  font-weight: bold;
+    cursor: pointer;
+    text-align: end;
+    margin-top: 8px;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+  }
+
+header{
+    padding-bottom: .4rem;
+    background-color: var(--tenue);
+}
+
+
+
+
+
+.buscar{
+  border: 0;
+  outline:none;
+  width: 100px;
+  height: 2.5rem;
+}
+
+
+
+.buscador2{
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1rem;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: var(--tenue);
+  border-radius: .7rem;
+  height: 2.5rem;
+}
+
+
+
+.buscador-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.buscador-icon {
+  position: absolute;
+  top: 65%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+
+.buscador-input {
+  width: 100%;
+  padding-left: 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+ 
+
+.del, .col, .cat{
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: #F5CD6E;
+  font-family: 'Krub', sans-serif;
+  font-size: 20px;
+  height: 2.5rem;
+  text-align: center;
+
+}
+
+.contenedor-main{
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  width: 100%;
+  max-width: 310.37px;
+  margin: 10px;
+}
+
+
+
+.menu-btn{
+  font-family: 'Krub', sans-serif;
+  color: var(--negro);
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arribita{
+  top: 0px;
+  margin-left: 20px;
+}
+
+
+.busy{
+  max-width: 200px;
+  height: 50px;
+  margin-top: 5px;
+}
